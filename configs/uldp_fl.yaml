@@ -1,0 +1,27 @@
+experiment_name: uldp_fl
+dataset: mnist
+data_dir: ./data
+num_clients: 10
+num_silos: 5
+client_fraction: 1.0
+num_rounds: 100
+alpha: 0.5
+local_epochs: 5
+batch_size: 32
+optimizer: sgd
+lr: 0.01
+momentum: 0.9
+weight_decay: 0.0
+seed: 42
+log_every: 5
+save_results: true
+results_dir: ./results
+convergence_threshold: 0.80
+# ULDP-FL specific
+clip_threshold: 1.0
+noise_sigma: 1.0
+epsilon: 5.0
+delta: 1.0e-5
+algorithm: uldp_avg
+max_records_per_user: 50
+adaptive_clipping: true
